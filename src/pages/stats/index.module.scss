@@ -1,0 +1,107 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  padding: $page-padding;
+  padding-bottom: 180rpx;
+}
+
+.statsRow {
+  display: flex;
+  gap: $spacing-md;
+  margin-bottom: $spacing-lg;
+}
+
+.card {
+  background: $color-bg-card;
+  border-radius: 16rpx;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.3);
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-md;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.communityStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+  justify-content: center;
+}
+
+.communityStat {
+  text-align: center;
+  width: 140rpx;
+}
+
+.communityCircle {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-white;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-lg;
+  margin: 0 auto $spacing-sm;
+}
+
+.communityName {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+  margin-bottom: 4rpx;
+}
+
+.communityPercentage {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.historyList {
+  max-height: 600rpx;
+  overflow-y: auto;
+}
+
+.historyItem {
+  padding: $spacing-md 0;
+  border-bottom: 1px solid $color-divider;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.historyItem:last-child {
+  border-bottom: none;
+}
+
+.historyType {
+  font-size: $font-size-sm;
+  color: $color-primary;
+  margin-right: $spacing-sm;
+}
+
+.historyContent {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.historyTime {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.emptyTip {
+  text-align: center;
+  padding: $spacing-xl;
+  color: $color-text-tertiary;
+  font-size: $font-size-md;
+}

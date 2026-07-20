@@ -1,0 +1,125 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  padding: $page-padding;
+  padding-bottom: 180rpx;
+}
+
+.card {
+  background: $color-bg-card;
+  border-radius: 16rpx;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.3);
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-md;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.metaBar {
+  text-align: center;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  padding: $spacing-md;
+  background: rgba($color-text-white, 0.05);
+  border-radius: 8rpx;
+  margin-bottom: $spacing-md;
+  word-break: break-all;
+}
+
+.btnGroup {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.btn {
+  padding: 28rpx $spacing-lg;
+  border-radius: 10rpx;
+  font-size: $font-size-md;
+  text-align: center;
+  color: $color-text-white;
+  
+  &:active {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, $color-primary, $color-primary-dark);
+}
+
+.btnSuccess {
+  background: linear-gradient(135deg, $color-success, #059669);
+}
+
+.btnWarning {
+  background: linear-gradient(135deg, $color-warning, #d97706);
+}
+
+.btnNeutral {
+  background: rgba($color-text-white, 0.1);
+  color: $color-text-secondary;
+}
+
+.importBtn {
+  position: relative;
+  overflow: hidden;
+}
+
+.importFileInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.section {
+  margin-bottom: $spacing-xl;
+}
+
+.sectionTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-secondary;
+  margin-bottom: $spacing-md;
+}
+
+.infoList {
+  background: $color-bg-card;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-lg;
+  border-bottom: 1px solid $color-divider;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.infoLabel {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+}
+
+.infoValue {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}

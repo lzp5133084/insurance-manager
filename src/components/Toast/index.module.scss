@@ -1,0 +1,39 @@
+@use '@/styles/variables.scss' as *;
+
+.toast {
+  position: fixed;
+  top: 120rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 24rpx 48rpx;
+  border-radius: 10rpx;
+  font-size: $font-size-md;
+  z-index: 1000;
+  animation: slideIn 0.3s ease;
+}
+
+.success {
+  background: rgba($color-success, 0.9);
+  color: $color-text-white;
+}
+
+.warning {
+  background: rgba($color-warning, 0.9);
+  color: $color-text-white;
+}
+
+.error {
+  background: rgba($color-error, 0.9);
+  color: $color-text-white;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}

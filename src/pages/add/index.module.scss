@@ -1,0 +1,530 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  padding: $page-padding;
+  padding-bottom: 180rpx;
+}
+
+.card {
+  background: $color-bg-card;
+  border-radius: 16rpx;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.3);
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-md;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.formGroup {
+  margin-bottom: $spacing-md;
+}
+
+.formLabel {
+  display: block;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  margin-bottom: 8rpx;
+}
+
+.formControl {
+  width: 100%;
+  padding: 20rpx 28rpx;
+  background: rgba($color-text-white, 0.05);
+  border: 1px solid $color-border;
+  border-radius: 10rpx;
+  color: $color-text-primary;
+  font-size: $font-size-md;
+  outline: none;
+  
+  &:focus {
+    border-color: $color-primary;
+  }
+}
+
+.formSelect {
+  width: 100%;
+  padding: 20rpx 28rpx;
+  background: rgba($color-text-white, 0.05);
+  border: 1px solid $color-border;
+  border-radius: 10rpx;
+  color: $color-text-primary;
+  font-size: $font-size-md;
+}
+
+.formTextarea {
+  width: 100%;
+  padding: 20rpx 28rpx;
+  background: rgba($color-text-white, 0.05);
+  border: 1px solid $color-border;
+  border-radius: 10rpx;
+  color: $color-text-primary;
+  font-size: $font-size-md;
+  min-height: 120rpx;
+  outline: none;
+  
+  &:focus {
+    border-color: $color-primary;
+  }
+}
+
+.birthdayCalcGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  background: rgba($color-purple, 0.05);
+  border: 1px dashed rgba($color-purple, 0.3);
+  border-radius: 12rpx;
+  margin-bottom: $spacing-md;
+}
+
+.calcAgeInput {
+  flex: 1;
+  min-width: 200rpx;
+  padding: 20rpx 28rpx;
+  background: rgba($color-text-white, 0.05);
+  border: 1px solid $color-border;
+  border-radius: 10rpx;
+  color: $color-text-primary;
+  font-size: $font-size-md;
+}
+
+.calcBtn {
+  padding: 20rpx $spacing-lg;
+  background: linear-gradient(135deg, $color-primary, $color-primary-dark);
+  border: none;
+  border-radius: 10rpx;
+  color: $color-text-white;
+  font-size: $font-size-sm;
+  
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.calcResultInput {
+  flex: 1;
+  min-width: 200rpx;
+  padding: 20rpx 28rpx;
+  background: rgba($color-purple, 0.1) !important;
+  border-color: rgba($color-purple, 0.4) !important;
+  border-radius: 10rpx;
+  color: #a5b4fc !important;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+}
+
+.insuredSection {
+  padding: $spacing-md;
+  background: rgba($color-primary, 0.05);
+  border: 1px solid rgba($color-primary, 0.2);
+  border-radius: 12rpx;
+  margin-bottom: $spacing-md;
+}
+
+.insuredHeader {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-primary-light;
+  margin-bottom: $spacing-md;
+}
+
+.insuranceSection {
+  padding: $spacing-md;
+  background: rgba($color-purple, 0.05);
+  border: 1px solid rgba($color-purple, 0.2);
+  border-radius: 12rpx;
+  margin-bottom: $spacing-md;
+}
+
+.insuranceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.insuranceTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: #c4b5fd;
+}
+
+.insuranceTypesWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.insuranceTypeTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8rpx;
+  padding: 12rpx 24rpx;
+  background: rgba($color-purple, 0.15);
+  border: 1px solid rgba($color-purple, 0.3);
+  border-radius: 16rpx;
+  font-size: $font-size-sm;
+  color: #c4b5fd;
+  
+  &.selected {
+    background: rgba($color-purple, 0.4);
+    border-color: rgba($color-purple, 0.7);
+    color: $color-text-white;
+  }
+}
+
+.insuranceAddRow {
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.insuranceAddInput {
+  flex: 1;
+  padding: 16rpx 24rpx;
+  background: rgba($color-text-white, 0.05);
+  border: 1px solid $color-border;
+  border-radius: 10rpx;
+  color: $color-text-primary;
+  font-size: $font-size-md;
+}
+
+.visitSection {
+  padding: $spacing-md;
+  background: rgba($color-pink, 0.05);
+  border: 1px solid rgba($color-pink, 0.2);
+  border-radius: 12rpx;
+  margin-bottom: $spacing-md;
+}
+
+.visitHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.visitTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: #fb7185;
+}
+
+.visitCount {
+  font-size: $font-size-sm;
+  color: #fb7185;
+}
+
+.visitAddForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.visitDateInput {
+  padding: 16rpx 24rpx;
+  background: rgba($color-text-white, 0.05);
+  border: 1px solid $color-border;
+  border-radius: 10rpx;
+  color: $color-text-primary;
+  font-size: $font-size-md;
+}
+
+.visitNoteInput {
+  flex: 1;
+  min-width: 200rpx;
+  padding: 16rpx 24rpx;
+  background: rgba($color-text-white, 0.05);
+  border: 1px solid $color-border;
+  border-radius: 10rpx;
+  color: $color-text-primary;
+  font-size: $font-size-md;
+  min-height: 80rpx;
+}
+
+.visitList {
+  max-height: 400rpx;
+  overflow-y: auto;
+}
+
+.visitItem {
+  padding: $spacing-md;
+  background: rgba($color-pink, 0.1);
+  border-radius: 8rpx;
+  margin-bottom: $spacing-sm;
+}
+
+.visitItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $font-size-sm;
+  color: #fb7185;
+  margin-bottom: 8rpx;
+}
+
+.visitItemContent {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.btnGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-top: $spacing-xl;
+}
+
+.btn {
+  flex: 1;
+  min-width: 140rpx;
+  padding: 24rpx $spacing-lg;
+  border: none;
+  border-radius: 10rpx;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  text-align: center;
+  
+  &:active {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, $color-primary, $color-primary-dark);
+  color: $color-text-white;
+}
+
+.btnSuccess {
+  background: linear-gradient(135deg, $color-success, #059669);
+  color: $color-text-white;
+}
+
+.btnNeutral {
+  background: rgba($color-text-white, 0.1);
+  color: $color-text-secondary;
+}
+
+.communitySection {
+  padding: $spacing-md;
+  background: rgba($color-green, 0.05);
+  border: 1px solid rgba($color-green, 0.2);
+  border-radius: 12rpx;
+  margin-bottom: $spacing-md;
+}
+
+.communityHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.communityTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-green;
+}
+
+.communityAddRow {
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.communityAddInput {
+  flex: 1;
+  padding: 16rpx 24rpx;
+  background: rgba($color-text-white, 0.05);
+  border: 1px solid $color-border;
+  border-radius: 10rpx;
+  color: $color-text-primary;
+  font-size: $font-size-md;
+}
+
+.communityListWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+}
+
+.communityTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8rpx;
+  padding: 12rpx 24rpx;
+  background: rgba($color-green, 0.15);
+  border: 1px solid rgba($color-green, 0.3);
+  border-radius: 20rpx;
+  font-size: $font-size-sm;
+  color: #6ee7b7;
+}
+
+.removeBtn {
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  background: rgba($color-error, 0.2);
+  border: none;
+  color: $color-error;
+  font-size: $font-size-xs;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    background: rgba($color-error, 0.4);
+  }
+}
+
+/* ===== 详细地址录入（2027科技风·橙金渐变） ===== */
+.addressSection {
+  padding: $spacing-lg;
+  background: linear-gradient(135deg, rgba($color-orange, 0.08) 0%, rgba($color-primary, 0.05) 100%);
+  border: 1px solid rgba($color-orange, 0.25);
+  border-radius: 16rpx;
+  margin-bottom: $spacing-md;
+  box-shadow: 0 4rpx 16rpx rgba(245, 158, 11, 0.08);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -60rpx;
+    right: -60rpx;
+    width: 180rpx;
+    height: 180rpx;
+    background: radial-gradient(circle, rgba($color-orange, 0.18) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+}
+
+.addressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: $spacing-md;
+  position: relative;
+  z-index: 1;
+}
+
+.addressTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-orange;
+  letter-spacing: 1rpx;
+}
+
+.addressHint {
+  font-size: $font-size-xs;
+  color: rgba($color-orange, 0.7);
+}
+
+.addressRow {
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.addressInput {
+  flex: 1;
+  padding: 16rpx 20rpx;
+  background: rgba($color-text-white, 0.06);
+  border: 1px solid rgba($color-orange, 0.25);
+  border-radius: 10rpx;
+  color: $color-text-primary;
+  font-size: $font-size-sm;
+  text-align: center;
+
+  &:focus {
+    border-color: $color-orange;
+  }
+}
+
+.addressCoordRow {
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.coordBox {
+  flex: 1;
+  padding: 16rpx 20rpx;
+  background: rgba($color-orange, 0.08);
+  border: 1px dashed rgba($color-orange, 0.35);
+  border-radius: 10rpx;
+}
+
+.coordLabel {
+  display: block;
+  font-size: $font-size-xs;
+  color: rgba($color-orange, 0.8);
+  margin-bottom: 4rpx;
+}
+
+.coordValue {
+  display: block;
+  font-size: $font-size-sm;
+  color: #fcd34d;
+  font-weight: $font-weight-semibold;
+  word-break: break-all;
+}
+
+.addressBtns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-sm;
+}
+
+.addressBtn {
+  flex: 1;
+  min-width: 180rpx;
+  background: linear-gradient(135deg, $color-orange, #d97706);
+  color: $color-text-white;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+}
+
+.addressBtnClear {
+  flex: 0 0 auto;
+  min-width: 120rpx;
+  background: rgba($color-text-white, 0.1);
+  color: $color-text-secondary;
+}
+
+.addressTipOk {
+  padding: 16rpx 20rpx;
+  background: rgba($color-success, 0.1);
+  border: 1px solid rgba($color-success, 0.3);
+  border-radius: 8rpx;
+  font-size: $font-size-xs;
+  color: $color-success;
+  text-align: center;
+  margin-top: $spacing-sm;
+}
+
+.addressTipWarn {
+  padding: 16rpx 20rpx;
+  background: rgba($color-warning, 0.08);
+  border: 1px solid rgba($color-warning, 0.25);
+  border-radius: 8rpx;
+  font-size: $font-size-xs;
+  color: rgba($color-warning, 0.9);
+  line-height: 1.5;
+  margin-top: $spacing-sm;
+}

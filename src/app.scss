@@ -1,0 +1,24 @@
+@use './styles/variables.scss' as *;
+
+page {
+  background: linear-gradient(135deg, $color-bg-page 0%, #1e293b 50%, $color-bg-page 100%);
+  min-height: 100vh;
+  color: $color-text-primary;
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+view, text {
+  box-sizing: border-box;
+}
+
+input, textarea {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
